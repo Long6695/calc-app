@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Grid, Stack } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 
 const DEL = 99;
 const ADD = 98;
@@ -56,22 +56,33 @@ const Keyboards = () => {
     >
       {KEYS.map((keyboard, index) => {
         const variant = styles[keyboard.key as keyof typeof styles] as type;
-        console.log(variant);
         return (
           <Grid item xs={3} key={index} sx={{ padding: 1 }}>
-            <Button variant={variant} sx={{ width: "100%", boxShadow: 'inset 0 -10px 8px -8px #000000'}}>
+            <Button
+              variant={variant}
+              sx={{
+                width: "100%",
+                boxShadow: "inset 0 -10px 8px -8px #000000",
+              }}
+            >
               {keyboard.label}
             </Button>
           </Grid>
         );
       })}
       <Grid item xs={6} sx={{ padding: 1 }}>
-        <Button sx={{ width: "100%", boxShadow: 'inset 0 -10px 10px -10px #000000' }} variant="darkBlueKeys">
+        <Button
+          sx={{ width: "100%", boxShadow: "inset 0 -10px 10px -10px #000000" }}
+          variant="darkBlueKeys"
+        >
           RESET
         </Button>
       </Grid>
       <Grid item xs={6} sx={{ padding: 1 }}>
-        <Button sx={{ width: "100%", boxShadow: 'inset 0 -10px 10px -10px #000000' }} variant="redKeys">
+        <Button
+          sx={{ width: "100%", boxShadow: "inset 0 -10px 10px -10px #000000" }}
+          variant="redKeys"
+        >
           =
         </Button>
       </Grid>
