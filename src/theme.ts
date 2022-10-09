@@ -33,11 +33,10 @@ export const theme = createTheme({
     MuiTextField: {
       variants: [
         {
-          props: { variant: "outlined" },
+          props: { variant: "outlined", disabled: true },
           style: {
             borderRadius: "5px",
             backgroundColor: "hsl(224, 36%, 15%)",
-            color: "#fff",
             fontSize: "30px",
             fontWeight: "700",
           },

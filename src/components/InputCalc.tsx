@@ -1,10 +1,23 @@
 import { FormControl, TextField } from "@mui/material";
 import React from "react";
 
-const InputCalc = () => {
+interface Props {
+  data: string;
+}
+
+const InputCalc = ({ data }: Props) => {
   return (
     <FormControl sx={{ width: "100%" }}>
-      <TextField variant="outlined" disabled/>
+      <TextField
+        value={data}
+        variant="outlined"
+        disabled
+        sx={{
+          "& .MuiInputBase-input.Mui-disabled": {
+            WebkitTextFillColor: "white",
+          },
+        }}
+      />
     </FormControl>
   );
 };
