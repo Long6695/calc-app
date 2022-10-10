@@ -22,10 +22,6 @@ const HeaderCalc = () => {
           justifyContent: "flex-end",
         }}
       >
-        <Stack direction="row" spacing={2} sx={{ alignItems: "center" }}>
-          <Typography variant="h4"> 1 </Typography>
-          <Typography variant="h4"> 2 </Typography>
-        </Stack>
         <Stack direction="row" sx={{ alignItems: "center" }}>
           <Typography variant="h3" sx={{ marginRight: 5 }}>
             theme
